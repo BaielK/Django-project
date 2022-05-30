@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<h1>Are you sure you want to delete "{{item}}"?</h1>
+
+<div class="buttons">
+	<div class="item-row" style="display: flex">
+		<a style="margin-right: 5px; margin-bottom: 15px; width: 90px;" class="btn btn-info" href="{% url 'list' %}">Отмена</a>
+		<form method="POST" action="">
+			{% csrf_token %}
+			<input class="btn btn-danger" type="submit" name="Confirm">
+		</form>
+	</div>
+</div>
+
+<style>
+	body{
+		background-color: #638CB8;
+	}
+
+	.buttons {
+		display: flex;
+		text-align: center;
+	}
+
+	.item-row{
+		text-align: center;
+		margin-left: 500px;
+		align-items: center;
+	}
+
+	.cancel {
+		width: 90px;
+		height: 45px;
+		margin-left: 450px;
+	}
+
+	h1{
+		color: rgb(255, 174, 0);
+		text-align: center;
+	}
+
+	
+
+	
+</style>
